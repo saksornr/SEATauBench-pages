@@ -2,6 +2,9 @@
 * { box-sizing: border-box; }
 body { margin: 32px auto 64px; max-width: 900px; padding: 0; }
 h1 { font-size: 40px; line-height: 1.2; letter-spacing: -1.1px; font-weight: 700; margin: 0 0 22px; }
+.paper-title { display: flex; flex-direction: column; align-items: flex-start; gap: 13px; }
+.title-logo { display: block; width: min(100%, 396px); height: auto; }
+.title-subtitle { display: block; }
 h2 { font-size: 23px; line-height: 1.35; letter-spacing: -.35px; margin: 0 0 16px; }
 p { margin: 0 0 16px; }
 a { color: inherit; text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
@@ -46,6 +49,8 @@ footer p { margin-bottom: 8px; }
 @media (max-width: 600px) {
   body { margin: 24px 20px 40px; }
   h1 { font-size: 29px; letter-spacing: -.65px; line-height: 1.22; }
+  .paper-title { gap: 10px; }
+  .title-logo { width: min(100%, 330px); }
   h2 { font-size: 21px; }
   .venue { margin-bottom: 22px; }
   .authors { font-size: 15px; }
