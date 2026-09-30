@@ -2,10 +2,15 @@
 * { box-sizing: border-box; }
 body { margin: 32px auto 64px; max-width: 900px; padding: 0; }
 h1 { font-size: 40px; line-height: 1.2; letter-spacing: -1.1px; font-weight: 700; margin: 0 0 22px; }
-.brand-row { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-bottom: 26px; }
-.brand-row .title-logo { width: min(55%, 396px); }
-.conference-logo { display: block; width: min(30%, 220px); height: auto; }
-.paper-title { display: flex; flex-direction: column; align-items: flex-start; gap: 13px; }
+.brand-row { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-bottom: 20px; }
+.project-brand { display: flex; align-items: center; gap: 8px; width: 52%; max-width: 460px; }
+.project-logo-link { display: block; width: calc(100% - 64px); }
+.project-brand .title-logo { width: 100%; }
+.mascot-link { display: block; flex-shrink: 0; }
+.sitaw-mascot { width: 56px; height: 56px; object-fit: contain; image-rendering: pixelated; }
+.conference-logo-link { display: block; width: min(34%, 280px); }
+.conference-logo { display: block; width: 100%; height: auto; }
+.paper-title { display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-bottom: 12px; }
 .title-logo { display: block; width: min(100%, 396px); height: auto; }
 .title-subtitle { display: block; }
 h2 { font-size: 23px; line-height: 1.35; letter-spacing: -.35px; margin: 0 0 16px; }
@@ -14,13 +19,13 @@ a { color: inherit; text-decoration: underline; text-underline-offset: 3px; over
 a:hover { color: #779955; }
 a:focus-visible, button:focus-visible, [tabindex]:focus-visible { outline: 3px solid #2878aa; outline-offset: 5px; }
 sup { font-size: .7em; line-height: 0; vertical-align: super; }
-.venue { color: #779955; font-weight: 600; margin-bottom: 28px; }
-.authors { line-height: 1.9; }
+.venue { color: #779955; font-weight: 600; margin-bottom: 14px; }
+.authors { line-height: 1.55; margin-bottom: 10px; }
 .authors span { display: inline-block; }
-.affiliations { font-size: 14px; line-height: 1.8; }
+.affiliations { font-size: 14px; line-height: 1.5; margin-bottom: 8px; }
 .affiliations span { display: inline; margin-right: 10px; }
 .author-note, .note, figcaption { color: #65635f; font-size: 14px; line-height: 1.55; }
-.author-note { font-size: 12px; }
+.author-note { font-size: 12px; margin-bottom: 8px; }
 .resources { margin-top: 24px; }
 .resources p { margin-bottom: 7px; }
 section { margin-top: 52px; scroll-margin-top: 24px; }
@@ -53,12 +58,14 @@ footer p { margin-bottom: 8px; }
   body { margin: 24px 20px 40px; }
   h1 { font-size: 29px; letter-spacing: -.65px; line-height: 1.22; }
   .brand-row { gap: 16px; margin-bottom: 22px; }
-  .brand-row .title-logo { width: 58%; }
-  .conference-logo { width: 34%; }
+  .project-brand { width: 58%; gap: 4px; }
+  .project-logo-link { width: calc(100% - 36px); }
+  .sitaw-mascot { width: 32px; height: 32px; }
+  .conference-logo-link { width: 34%; }
   .paper-title { gap: 10px; }
   .title-logo { width: min(100%, 330px); }
   h2 { font-size: 21px; }
-  .venue { margin-bottom: 22px; }
+  .venue { margin-bottom: 12px; }
   .authors { font-size: 15px; }
   .affiliations span { display: inline-block; }
   .resources { font-size: 14px; }
@@ -68,3 +75,13 @@ footer p { margin-bottom: 8px; }
   pre { padding: 16px; font-size: 12px; }
 }
 @media print { body { max-width: none; margin: 0; } .skip-link, #copy-citation, #copy-status { display: none; } figure { break-inside: avoid; } }
+
+.affiliation-logos { display: grid; grid-template-columns: 1.2fr 1.3fr .85fr .65fr 1fr .9fr 1.3fr .95fr; align-items: center; gap: 16px; margin: 18px 0; padding: 14px 0; border-top: 1px solid #ebeae7; border-bottom: 1px solid #ebeae7; }
+.affiliation-logo { display: block; width: 100%; min-width: 0; height: 36px; object-fit: contain; }
+.affiliation-logo.datax { height: 28px; object-fit: cover; }
+.affiliation-logo.chula { height: 36px; object-fit: cover; }
+@media (max-width: 600px) { .affiliation-logos { gap: 6px; margin: 14px 0; padding: 10px 0; } .affiliation-logo { height: 22px; } .affiliation-logo.datax, .affiliation-logo.chula { height: 18px; } }
+
+.affiliation-logos a { display: block; min-width: 0; }
+.brand-row a, .affiliation-logos a { text-decoration: none; }
+.brand-row a:hover, .affiliation-logos a:hover { opacity: .8; }
