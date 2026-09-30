@@ -2,8 +2,9 @@
 * { box-sizing: border-box; }
 body { margin: 32px auto 64px; max-width: 900px; padding: 0; }
 h1 { font-size: 40px; line-height: 1.2; letter-spacing: -1.1px; font-weight: 700; margin: 0 0 22px; }
-.conference-brand { display: flex; justify-content: flex-end; margin-bottom: 24px; }
-.conference-brand img { display: block; width: min(100%, 280px); height: auto; }
+.brand-row { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-bottom: 26px; }
+.brand-row .title-logo { width: min(55%, 396px); }
+.conference-logo { display: block; width: min(30%, 220px); height: auto; }
 .paper-title { display: flex; flex-direction: column; align-items: flex-start; gap: 13px; }
 .title-logo { display: block; width: min(100%, 396px); height: auto; }
 .title-subtitle { display: block; }
@@ -51,8 +52,9 @@ footer p { margin-bottom: 8px; }
 @media (max-width: 600px) {
   body { margin: 24px 20px 40px; }
   h1 { font-size: 29px; letter-spacing: -.65px; line-height: 1.22; }
-  .conference-brand { margin-bottom: 20px; }
-  .conference-brand img { width: min(100%, 220px); }
+  .brand-row { gap: 16px; margin-bottom: 22px; }
+  .brand-row .title-logo { width: 58%; }
+  .conference-logo { width: 34%; }
   .paper-title { gap: 10px; }
   .title-logo { width: min(100%, 330px); }
   h2 { font-size: 21px; }
