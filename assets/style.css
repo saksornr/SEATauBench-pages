@@ -4,9 +4,12 @@ body { margin: 32px auto 64px; max-width: 900px; padding: 0; }
 h1 { font-size: 40px; line-height: 1.2; letter-spacing: -1.1px; font-weight: 700; margin: 0 0 22px; }
 .brand-row { display: flex; align-items: center; justify-content: space-between; gap: 32px; margin-bottom: 20px; }
 .project-brand { display: flex; align-items: center; gap: 8px; width: 52%; max-width: 460px; }
-.project-brand .title-logo { width: calc(100% - 64px); }
+.project-logo-link { display: block; width: calc(100% - 64px); }
+.project-brand .title-logo { width: 100%; }
+.mascot-link { display: block; flex-shrink: 0; }
 .sitaw-mascot { width: 56px; height: 56px; object-fit: contain; image-rendering: pixelated; }
-.conference-logo { display: block; width: min(34%, 280px); height: auto; }
+.conference-logo-link { display: block; width: min(34%, 280px); }
+.conference-logo { display: block; width: 100%; height: auto; }
 .paper-title { display: flex; flex-direction: column; align-items: flex-start; gap: 13px; margin-bottom: 12px; }
 .title-logo { display: block; width: min(100%, 396px); height: auto; }
 .title-subtitle { display: block; }
@@ -56,9 +59,9 @@ footer p { margin-bottom: 8px; }
   h1 { font-size: 29px; letter-spacing: -.65px; line-height: 1.22; }
   .brand-row { gap: 16px; margin-bottom: 22px; }
   .project-brand { width: 58%; gap: 4px; }
-  .project-brand .title-logo { width: calc(100% - 36px); }
+  .project-logo-link { width: calc(100% - 36px); }
   .sitaw-mascot { width: 32px; height: 32px; }
-  .conference-logo { width: 34%; }
+  .conference-logo-link { width: 34%; }
   .paper-title { gap: 10px; }
   .title-logo { width: min(100%, 330px); }
   h2 { font-size: 21px; }
@@ -78,3 +81,7 @@ footer p { margin-bottom: 8px; }
 .affiliation-logo.datax { height: 28px; object-fit: cover; }
 .affiliation-logo.chula { height: 36px; object-fit: cover; }
 @media (max-width: 600px) { .affiliation-logos { gap: 6px; margin: 14px 0; padding: 10px 0; } .affiliation-logo { height: 22px; } .affiliation-logo.datax, .affiliation-logo.chula { height: 18px; } }
+
+.affiliation-logos a { display: block; min-width: 0; }
+.brand-row a, .affiliation-logos a { text-decoration: none; }
+.brand-row a:hover, .affiliation-logos a:hover { opacity: .8; }
